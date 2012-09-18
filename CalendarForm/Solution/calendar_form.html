@@ -1,127 +1,136 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar form</title>
+    <style>
+      body {
+        font: 1em Arial, sans-serif;
+      }
 
-<style>
-
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 82.5%;
-    letter-spacing: -1px;
-  }
+      input,
+      textarea {
+        font: inherit;
+      }
+/*
+      .wrapper {
+        position: relative;
+        width: 500px;
+      }
+*/        
+      .wrapper {
+        position: relative;
+        width: 90%;
+        left: 10px;
+        min-width: 350px;
+        max-width: 800px;
+      }
   
-  input,
-  textarea {
-    font-family: inherit;
-    font-size: 1em;
-  }
-
-  .wrapper {
-    border: 1px solid reda;
-    position: relative;
-    width: 500px;
-  }
+      .main,
+      .secondary {
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        width: 100%;
+      }
   
-  .main,
-  .secondary {
-    border: 1px solid #00;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
-    width: 100%;
-  }
+      .main {
+        font-weight: bold;
+        font-size: 24px;
+        padding-top: 8px;
+        padding-bottom: 6px;
+      }
   
-  .main {
-    font-weight: bold;
-    font-size: 24px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-  }
+      .left {
+        float: left;
+        margin-right: 8px;
+      }
+      
+      .right {
+        float: right;
+        margin-left: 8px;
+      }
   
-  .dropdowns {
-    margin-top: 6px;
-    overflow: hidden;
-    line-height: 2.2;
-  }
+      .dash {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
   
-  .left,
-  .right {
-    padding: 0 10px;;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 22%;
-  }
+      .dropdowns {
+        margin-top: 6px;
+        overflow: hidden;
+        line-height: 2.2;
+      }
   
-  .left:after,
-  .right:after {
-    color: #ccc;
-    content: '▾';
-    float: right;
-  }
+      .left,
+      .right {
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        width: 22%;
+      }
   
-  .left {
-    float: left;
-    margin-right: 8px;
-  }
+      .left::after,
+      .right::after {
+        content: '▾';
+        color: #ccc;
+        float: right;
+      }
   
-  .dash {
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: -1;
-  }
+      label {
+        display: block;
+        margin-top: 25px;
+      }
   
-  .right {
-    float: right;
-    margin-left: 8px;
-  }
+      .info {
+        color: #ccc;
+      }
   
-  label {
-    display: block;
-    margin-top: 25px;
-  }
+      .link {
+        text-decoration: underline;
+        cursor: pointer;
+      }
   
-  img {
-    display: none;
-    position: absolute;
-    left: -210px;
-    opacity: .1;
-    top: -162px;
-    -webkit-transition: all 1s
-  }
+      .secondary {
+        margin-top: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
   
-  img:hover {
-    opacity: 1;
-  }
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+      }
   
-  .info {
-    color: #ccc;
-  }
+      img:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input class="main" value="Calendar form">
+      <div class="dropdowns">
+        <div class="left">Today</div>
+        <div class="left">9:30a</div>
+        <div class="right">Today</div>
+        <div class="right">9:55a</div>
+        <div class="dash">&mdash;</div>
+      </div>
   
-  .link {
-    text-decoration: underline;
-  }
-  
-  .secondary {
-    margin-top: 6px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-  
-</style>
-
-<div class="wrapper">
-  <input class="main" value="Lab 1 Calendar Form">
-  <div class="dropdowns">
-    <div class="left">Today</div>
-    <div class="left">9:30a</div>
-    <div class="dash">&mdash;</div>
-    <div class="right">Today</div>
-    <div class="right">9:55a</div>
-  </div>
-  
-  <label>Where <span class="info">&ndash; <a class="link">Find on map</a></span></label>
-  <input class="secondary" value="O157">
-  <label>When <span class="info"></label>
-  <input class="secondary" value="Tommorow">
-</div>
+      <label>Where <span class="info">&ndash; <a class="link">Find on map</a></span></label>
+      <input class="secondary" value="O157">
+      <label for="description">Description</label>
+      <textarea class="secondary" id="description">Lab to practice CSS</textarea>
+    </div>
+    <!-- 
+    <img src="solutionYellow.png">
+     -->
+  </body>
+</html>
