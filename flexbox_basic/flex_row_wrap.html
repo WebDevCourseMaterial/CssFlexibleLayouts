@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Row wrap</title>
+    <style>
+      body {
+        font: bold 1.5em "Comic Sans MS", sans;
+        text-shadow: 1px 1px lightgray;
+        text-align: center;
+        line-height: 100px;
+      }
+      .wrapper {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /*
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        */
+        width: 606px;
+        height: 306px;
+        
+      }
+      .box {
+        border: 1px solid #000;
+        width: 200px;
+        height: 100px;
+      }
+      .box:nth-child(1) {
+        background: hsla(0, 70%, 30%, .75);
+      }
+      .box:nth-child(2) {
+        background: hsla(30, 70%, 30%, .75);
+      }
+      .box:nth-child(3) {
+        background: hsla(60, 70%, 30%, .75);
+      }
+      .box:nth-child(4) {
+        background: hsla(90, 70%, 30%, .75);
+      }
+      .box:nth-child(5) {
+        background: hsla(150, 70%, 30%, .75);
+      }
+      .box:nth-child(6) {
+        background: hsla(210, 70%, 30%, .75);
+      }
+      .box:nth-child(7) {
+        background: hsla(270, 70%, 30%, .75);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">box 1</div>
+      <div class="box">box 2</div>
+      <div class="box">box 3</div>
+      <div class="box">box 4</div>
+      <div class="box">box 5</div>
+      <div class="box">box 6</div>
+      <div class="box">box 7</div>
+    </div>
+  </body>
+</html>
