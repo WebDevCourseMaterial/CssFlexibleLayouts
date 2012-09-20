@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 0</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        overflow: hidden;
+        font: bold 2em "Comic Sans MS", sans;
+        text-shadow: 1px 1px gray;
+        text-align: center;
+        min-width: 350px;
+      }
+      div {
+        border: 1px solid #222;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        overflow: hidden;
+      }
+      .wrapper {
+        height: 60%;
+      }
+      .header,
+      .footer {
+        height: 20%;
+        min-height: 100px;
+      }
+      .header {
+        background: yellow;
+      }
+      .left {
+        background: rgba(255, 0, 0, .5);
+        float: left;
+        width: 20%;
+      }
+      .middle {
+        background: rgba(0, 255, 0, .5);
+        margin: 0 20%;
+      }
+      .right {
+        background: rgba(0, 0, 255, .5);
+        float: right;
+        width: 20%;
+      }
+      .left,
+      .middle,
+      .right {
+        margin-bottom: -1000px;
+        padding-bottom: 1000px;
+      }
+      .footer {
+        background: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Header</div>
+    <div class="wrapper">
+      <div class="left">
+        Left
+      </div>
+      <div class="right">
+        Right
+      </div>
+      <div class="middle">
+        Middle
+      </div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+</html>
