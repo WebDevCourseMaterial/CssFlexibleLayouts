@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Align self</title>
+    <style>
+      body {
+        font: bold 1.5em "Comic Sans MS", sans;
+        text-shadow: 1px 1px lightgray;
+        text-align: center;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        height: 95%;
+      }
+      div {
+        border: 1px solid #000;
+      }
+      .wrapper {
+        height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+        -webkit-align-items: center;
+        align-items: center;
+        /*
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-align-items: flex-end;
+        align-items: flex-end;
+        -webkit-align-items: baseline;
+        align-items: baseline;
+        -webkit-align-items: stretch;
+        align-items: stretch;
+        */
+      }
+      .row-1 {
+        background: rgba(255, 0, 0, .5);
+        -webkit-align-self: stretch;
+        align-self: stretch;
+      }
+      .row-2 {
+        background: rgba(0, 255, 0, .5);
+        -webkit-flex: 1;
+        flex: 1;
+      }
+      .row-3 {
+        background: rgba(0, 0, 255, .5);
+        -webkit-flex: 2;
+        flex: 2;
+        -webkit-align-self: flex-end;
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row-1">
+        row 1
+      </div>
+      <div class="row-2">
+        row 2
+      </div>
+      <div class="row-3">
+        row 3
+      </div>
+    </div>
+  </body>
+</html>

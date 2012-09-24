@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Board</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        font: bold 2em "Comic Sans MS", sans;
+        text-shadow: 1px 1px gray;
+        text-align: center;
+      }
+      body {
+        /* Flexbox related. */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        
+      }
+      .title {
+        white-space: nowrap;
+        margin: 10px;
+        font-size: 1.5em;
+      }
+      .row {
+        /* Flexbox related. */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row;
+        flex-flow: row;
+      }
+      .row > div {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+      }
+      .row:nth-child(1) > div {
+        border-bottom: 1px solid black;
+      }
+      .row:nth-child(2) > div {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      .row:nth-child(3) > div {
+        border-top: 1px solid black;
+      }
+      .row > div:nth-child(1) {
+        border-right: 1px solid black;
+      }
+      .row > div:nth-child(2) {
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+      }
+      .row > div:nth-child(3) {
+        border-left: 1px solid black;
+      }
+      .new-game-wrapper {
+        text-align: right;
+      }
+      button {
+        margin-top: 20px;
+        font-size: 0.75em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Tic-Tac-Toe</div>
+    <div class="main">
+      <div class="board">
+	      <div class="row">
+	        <div>X</div>
+	        <div>O</div>
+	        <div></div>
+	      </div>
+	      <div class="row">
+	        <div></div>
+	        <div>O</div>
+	        <div></div>
+	      </div>
+	      <div class="row">
+	        <div>X</div>
+	        <div></div>
+	        <div></div>
+	      </div>
+	    </div>
+      <div class="new-game-wrapper">
+        <button class="new-game">New game</button>
+      </div>
+    </div>
+  </body>
+</html>

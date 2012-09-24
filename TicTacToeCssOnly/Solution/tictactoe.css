@@ -1,0 +1,91 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+  background-image: url('images/background.jpg');    
+  font: 1.5em normal 'Skranji', cursive;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.main {
+  width: 80%;
+  max-width: 700px;
+}
+
+.game-state {
+  color:#ccc;
+  font-size: 3em;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+}
+
+.board {
+  background-image: url('images/grid.png');
+  background-size: 100% 100%;
+}
+
+.row {
+ 	display: -webkit-flex;
+ 	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+}
+
+.square {
+  margin: 2%;
+}
+
+.new-game-wrapper {
+  text-align: right;
+}
+
+.new-game {
+  color: #444;
+  font-size: 1em;
+  font-family: inherit;
+  margin-right: 10px;
+  padding: 3px 10px;
+}
+
+img {
+  width:  256px;
+  height: auto;
+}
+
+.oturn img[src="images/empty.png"]:hover {
+  background-image: url('images/mark_o.png');
+}
+
+.xturn img[src="images/empty.png"]:hover {
+  background-image: url('images/mark_x.png');
+}
+
+img[src="images/empty.png"]:hover,
+img[src="images/empty.png"]:active {
+  background-size: 100% 100%;
+  -webkit-filter: grayscale(0.5) blur(2px);
+  filter: grayscale(0.5) blur(2px);
+  cursor: pointer;
+}
+
+img[src="images/empty.png"]:hover {
+  opacity: 0.2;
+}
+
+img[src="images/empty.png"]:active {
+  opacity: 0.6;
+}
+
+
+.goog-control {
+	/* Used when adding JavaScript. */
+	outline: none;
+}

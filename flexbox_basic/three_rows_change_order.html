@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox basic</title>
+    <style>
+      html, body, .wrapper {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      body {
+        font: bold 1.5em "Comic Sans MS", sans;
+        text-shadow: 1px 1px lightgray;
+        text-align: center;
+      }
+      div {
+        border: 1px solid #000;
+      }
+      .wrapper {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+      }
+      .row-1 {
+        background: rgba(255, 0, 0, .5);
+        -webkit-order: 2;
+        order: 2;
+      }
+      .row-2 {
+        background: rgba(0, 255, 0, .5);
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-order: 3;
+        order: 3;
+      }
+      .row-3 {
+        background: rgba(0, 0, 255, .5);
+        -webkit-flex: 2;
+        flex: 2;
+        -webkit-order: 1;
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row-1">
+        row 1
+      </div>
+      <div class="row-2">
+        row 2
+      </div>
+      <div class="row-3">
+        row 3
+      </div>
+    </div>
+  </body>
+</html>
