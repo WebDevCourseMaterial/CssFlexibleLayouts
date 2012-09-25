@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calc</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      .box {
+        position: absolute;
+        height: -webkit-calc( (100% - 30px) / 2);
+        height: calc( (100% - 30px) / 2);
+        width: -webkit-calc( (100% - 30px) / 2);
+        width: calc( (100% - 30px) / 2);
+        box-sizing: border-box;
+      }
+      .box:nth-child(1) {
+        background-color: #800;
+        right: 10px;
+        bottom: 10px;
+      }
+      .box:nth-child(2) {
+        background-color: #cc0;
+        right: 10px;
+        top: 10px;
+      }
+      .box:nth-child(3) {
+        background-color: #080;
+        left: 10px;
+        top: 10px;
+      }
+      .box:nth-child(4) {
+        background-color: #008;
+        left: 10px;
+        bottom: 10px;
+      }
+      .box {
+        /* Decorative */
+        font: 14em "Comic Sans MS", sans;
+        border: 2px solid #333;
+        border-radius: 30px;
+        box-shadow: 2px 2px 5px gray;
+        color: white;
+        text-shadow: 2px 2px 5px gray;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">C</div>
+    <div class="box">A</div>
+    <div class="box">S</div>
+    <div class="box">T</div>
+  </body>
+</html>
